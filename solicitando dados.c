@@ -3,7 +3,7 @@
 //#include <string.h>
 int main()
 {
-    // declarando vriaveis.
+    // declarando variaveis.
     int idade;
     char sexo[200];
     float peso;
