@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+int main() {
+    int nota;
+    int contador = 0;
+    float mediaPar;
+    int somaPar;
+    float mediaImpar;
+    int somaImpar;
+    int soma = 0;
+    int par = 0;
+    int impar = 0;
+    float media;
+
+    do
+    {
+        printf("Digite a nota: \n");
+        scanf("%d", &nota);
+        if (nota > 0) {
+            contador++;
+            soma += nota;
+            if (nota % 2 == 0)
+            {
+                par++;
+                somaPar += nota;
+            }
+            else
+            {
+                impar++;
+                somaImpar += nota;
+            }
+        }
+        } while (nota != 0);
+
+        media = soma / contador;
+        mediaPar = somaPar / par;
+        mediaImpar = somaImpar / impar;
+
+        printf("Quantidade de numeros pares: %d \n", par);
+        printf("Quantidade de numeros impares: %d \n", impar);
+        printf("media de numeros pares: %.2f \n", mediaPar);
+        printf("media de numeros impares: %.2f \n", mediaImpar);
+        printf("Media geral: %.2f \n", media);
+
+return 0;
+}
+
